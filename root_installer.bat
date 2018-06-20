@@ -76,6 +76,6 @@ If not exist 7z.exe set /a missing_files=%missing_files%+1
 If %missing_files% GTR 0 set error_reason="Missing %missing_files% setup files! Please make sure to download everything"
 If %missing_files% GTR 0 goto ERROR
 7z.exe e ya5qr.7z
-If not %ERRORLEVEL% == 0 set error_reason="
+If not %ERRORLEVEL% == 0 set error_reason="error executing extractor”
 Goto ERROR
 pause
